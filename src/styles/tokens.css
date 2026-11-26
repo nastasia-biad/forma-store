@@ -1,0 +1,120 @@
+/*
+  FORMA design tokens.
+
+  Neutral warm-ink scale for text, surfaces, and the brand accent.
+  Green and red are reserved for success and error.
+  Change the brand later by replacing --color-accent only.
+
+  Breakpoints, mobile first:
+  - mobile:  default, under 48rem (768px)
+  - tablet:  48rem
+  - laptop:  64rem (1024px)
+  - desktop: 90rem (1440px)
+*/
+
+:root {
+  color-scheme: light;
+
+  /* Color */
+  --color-text: #2c261f;
+  --color-text-secondary: #5c534c;
+  --color-bg: #fbf7f2;
+  --color-bg-secondary: #f1e6d8;
+  --color-border: #e4d8c8;
+  --color-accent: #2c261f;
+  --color-on-accent: #fbf7f2;
+  --color-olive: #5e6544;
+  --swatch-natural-oak: #c4a36a;
+  --swatch-light-oak: #eadcc6;
+  --swatch-warm-oak: #a56b45;
+  --swatch-sand: #d9c4a0;
+  --swatch-olive: #6d7348;
+  --swatch-brass: #b08d57;
+  --color-success: #067647;
+  --color-error: #b91c1c;
+  --color-focus: var(--color-accent);
+
+  /* Type */
+  --font-family-base: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+  --font-family-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+
+  --font-size-h1: clamp(2rem, 1.25rem + 2.2vw, 3.5rem);
+  --font-size-h2: clamp(1.5rem, 1.1rem + 1.2vw, 2.25rem);
+  --font-size-h3: clamp(1.25rem, 1.05rem + 0.7vw, 1.75rem);
+  --font-size-h4: clamp(1.125rem, 1.02rem + 0.3vw, 1.375rem);
+  --font-size-h5: 1rem;
+  --font-size-h6: 0.875rem;
+  --font-size-body: clamp(1rem, 0.9rem + 0.35vw, 1.125rem);
+  --font-size-small: 0.875rem;
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-heading: 1.2;
+  --line-height-body: 1.5;
+  --line-height-small: 1.4;
+
+  /* Space — 4px grid */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* Layout */
+  --container-width: 75rem;
+  --container-wide: 90rem;
+  --container-narrow: 45rem;
+  --layout-gutter: var(--space-md);
+  --section-space: var(--space-2xl);
+  --button-height: 3rem;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgb(28 25 23 / 0.06);
+  --shadow-md: 0 4px 8px rgb(28 25 23 / 0.06), 0 1px 2px rgb(28 25 23 / 0.04);
+  --shadow-lg: 0 16px 32px rgb(28 25 23 / 0.1), 0 2px 8px rgb(28 25 23 / 0.06);
+
+  /*
+    Names already used by the current page.
+    They point at the tokens above so existing rules keep working.
+  */
+  --text: var(--color-text-secondary);
+  --text-h: var(--color-text);
+  --bg: var(--color-bg);
+  --border: var(--color-border);
+  --code-bg: var(--color-bg-secondary);
+  --accent: var(--color-accent);
+  --accent-bg: color-mix(in srgb, var(--color-accent) 8%, transparent);
+  --accent-border: color-mix(in srgb, var(--color-accent) 45%, transparent);
+  --social-bg: color-mix(in srgb, var(--color-bg-secondary) 80%, var(--color-bg));
+  --shadow: var(--shadow-md);
+  --sans: var(--font-family-base);
+  --heading: var(--font-family-base);
+  --mono: var(--font-family-mono);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}

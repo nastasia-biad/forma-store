@@ -1,0 +1,232 @@
+.about-hero__grid,
+.about-split,
+.about-copy,
+.about-materials__intro,
+.about-end__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  min-width: 0;
+}
+
+.about__kicker {
+  margin: 0;
+  color: var(--color-olive);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.16em;
+  line-height: var(--line-height-small);
+  text-transform: uppercase;
+}
+
+.about h1,
+.about h2,
+.about p,
+.about blockquote,
+.about figcaption {
+  margin: 0;
+}
+
+.about h1 {
+  max-width: 11em;
+}
+
+.about-hero__copy p,
+.about-copy p {
+  max-width: 38rem;
+  color: var(--color-text-secondary);
+}
+
+.about-hero__copy p {
+  font-size: var(--font-size-h4);
+  line-height: 1.45;
+}
+
+.about-hero__photo,
+.about-figure {
+  min-width: 0;
+  background-color: var(--color-bg-secondary);
+}
+
+.about-hero__photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.about-hero__photo img,
+.about-figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-figure img {
+  aspect-ratio: 4 / 3;
+}
+
+.about-figure figcaption {
+  padding-top: var(--space-sm);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.about-quote blockquote {
+  max-width: 16em;
+  margin-left: auto;
+  font-size: clamp(1.75rem, 1.2rem + 2vw, 3rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.about-materials {
+  scroll-margin-top: var(--space-lg);
+}
+
+.about-materials__grid {
+  display: grid;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.about-materials__stack {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.about-thesis {
+  background-color: var(--color-bg-secondary);
+}
+
+.about-thesis__inner p {
+  max-width: 14em;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.5rem);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.about__link,
+.about-end__links a {
+  color: inherit;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.about__link:hover,
+.about-end__links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.about-end {
+  background-color: var(--color-bg-secondary);
+}
+
+.about-end__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-lg);
+}
+
+.about-end__copy p {
+  max-width: 28rem;
+  color: var(--color-text-secondary);
+}
+
+.about-end__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-xl);
+}
+
+.about-end__photo img {
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 48rem) {
+  .about-hero__grid,
+  .about-split,
+  .about-end__grid {
+    display: grid;
+    align-items: end;
+    gap: var(--space-xl);
+  }
+
+  .about-hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(14rem, 0.8fr);
+  }
+
+  .about-split {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+  }
+
+  .about-split--flip {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  }
+
+  .about-end__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+  }
+
+  .about-materials__stack {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about-hero__grid {
+    grid-template-columns: minmax(0, 1.35fr) minmax(16rem, 0.75fr);
+    gap: var(--space-2xl);
+  }
+
+  .about-hero__photo {
+    aspect-ratio: 5 / 4;
+    min-height: 28rem;
+  }
+
+  .about-split {
+    gap: var(--space-3xl);
+  }
+
+  .about-materials__grid {
+    grid-template-columns: minmax(0, 1.15fr) minmax(16rem, 0.85fr);
+    align-items: start;
+  }
+
+  .about-materials__intro {
+    grid-column: 1 / -1;
+  }
+
+  .about-figure--wide img {
+    aspect-ratio: 16 / 11;
+    min-height: 24rem;
+  }
+
+  .about-materials .about-copy {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-xl) var(--space-3xl);
+    align-items: start;
+  }
+
+  .about-figure--strip {
+    grid-column: 1 / -1;
+  }
+
+  .about-figure--strip img {
+    aspect-ratio: 21 / 9;
+    max-height: 22rem;
+  }
+
+  .about-end__grid {
+    gap: var(--space-2xl);
+  }
+}

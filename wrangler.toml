@@ -1,0 +1,3 @@
+# Статический сайт для Cloudflare Pages. Каталога functions нет.
+name = "forma"
+pages_build_output_dir = "dist"

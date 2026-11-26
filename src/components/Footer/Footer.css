@@ -1,0 +1,73 @@
+.footer {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__inner {
+  display: grid;
+  gap: var(--space-xl);
+  padding-block: var(--space-2xl) var(--space-xl);
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 22rem;
+}
+
+.footer__logo {
+  color: var(--color-text);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.18em;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.footer h2 {
+  margin: 0 0 var(--space-md);
+  color: var(--color-olive);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.16em;
+  line-height: var(--line-height-small);
+  text-transform: uppercase;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.footer__bar {
+  padding-bottom: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-md);
+}
+
+@media (min-width: 48rem) {
+  .footer__inner {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}

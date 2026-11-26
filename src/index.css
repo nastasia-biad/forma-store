@@ -1,0 +1,9 @@
+@import "./styles/tokens.css";
+@import "./styles/base.css";
+@import "./styles/layout.css";
+
+#root {
+  width: 100%;
+  min-height: 100svh;
+  min-width: 0;
+}
